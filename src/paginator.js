@@ -145,29 +145,29 @@ import "./tui-pagination.css";
 //   }
 // }
 
-export const createPaginator = function (pageForStartPaginator) {
-  const paginatorOptions = {
-    totalItems: myNewTotalAmountOfFilms,
-    itemsPerPage: 20,
-    visiblePages: getVisiblePagesCount(),
-    centerAlign: true,
-    totalPage: pageForStartPaginator,
-  };
+// export const createPaginator = function (pageForStartPaginator) {
+//   const paginatorOptions = {
+//     totalItems: myNewTotalAmountOfFilms,
+//     itemsPerPage: 20,
+//     visiblePages: getVisiblePagesCount(),
+//     centerAlign: true,
+//     totalPage: pageForStartPaginator,
+//   };
 
-  new Pagination(document.getElementById("pagination2"), paginatorOptions);
-  let page = 1;
-  refs.paginationRef.addEventListener("click", (event) => {
-    isEnabled(event);
-  });
+//   new Pagination(document.getElementById("pagination2"), paginatorOptions);
+//   let page = 1;
+//   refs.paginationRef.addEventListener("click", (event) => {
+//     isEnabled(event);
+//   });
 
-  function isEnabled(event) {
-    const arr = Array.from(event.target.classList);
-    if (!arr.includes("tui-pagination")) {
-      setPaginator(event);
+//   function isEnabled(event) {
+//     const arr = Array.from(event.target.classList);
+//     if (!arr.includes("tui-pagination")) {
+//       setPaginator(event);
 
-      document.body.clientWidth <= 767 ? backToTopMob() : backToTop();
-    }
-  }
+//       document.body.clientWidth <= 767 ? backToTopMob() : backToTop();
+//     }
+//   }
 
 //   function setPaginator(event) {
 //     page = 1;
