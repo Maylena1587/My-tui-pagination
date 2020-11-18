@@ -1,11 +1,11 @@
 {
-  "name": "tasks-7.6-homework",
+  "name": "my-tui-pagination",
   "version": "1.0.0",
-  "description": "tasks-7.6-homework",
+  "description": "my-tui-pagination",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build src/*.html --public-url /tasks-7.6-homework/",
+    "build": "parcel build src/*.html --public-url /my-tui-pagination/",
     "dev": "parcel src/*.html",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Maylena1587/tasks-7.6-homework.git"
+    "url": "git+https://github.com/Maylena1587/my-tui-pagination.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Maylena1587/tasks-7.6-homework/issues"
+    "url": "https://github.com/Maylena1587/my-tui-pagination/issues"
   },
-  "homepage": "https://Maylena1587.github.io/tasks-7.6-homework",
+  "homepage": "https://Maylena1587.github.io/my-tui-pagination",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
