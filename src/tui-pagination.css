@@ -1,15 +1,13 @@
-/*!
- * TOAST UI Pagination
- * @version 3.4.0
- * @author NHN FE Development Team <dl_javascript@nhn.com>
- * @license MIT
- */
-@charset 'utf-8';
+/* @charset 'utf-8'; */
 .tui-pagination * {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.tui-pagination.is-not-visible {
+  display: none;
 }
 
 .tui-ico-ellipsis,
@@ -21,27 +19,34 @@
 }
 
 .tui-pagination {
-  height: 28px;
-  margin: 14px 0 12px;
+  height: 40px;
+  margin: 14px 0 -12px;
   line-height: normal;
   text-align: center;
   font-size: 0;
+  padding-top: 50px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .tui-pagination {
+    padding-top: 30px;
+  }
 }
 
 .tui-pagination .tui-page-btn {
   display: inline-block;
   position: relative;
-  width: 28px;
-  padding: 8px 0 6px;
+  width: 40px;
+  padding: 12px 0 6px;
   margin-left: 0;
   color: #333;
   font-size: 12px;
   font-weight: normal;
-  line-height: 1;
+  /* line-height: 1; */
+  height: 22px;
   text-decoration: none;
   vertical-align: middle;
-  border: 1px solid #ddd;
-  border-width: 1px 0;
+  border-radius: 5px;
 }
 
 .tui-pagination .tui-page-btn:hover {
@@ -51,13 +56,13 @@
 .tui-pagination .tui-is-selected,
 .tui-pagination strong {
   color: #fff;
-  background: #4b96e6;
-  border-color: #4b96e6;
+  background: #ff6b08;
+  border-color: #ff6b08;
   cursor: default;
 }
 
 .tui-pagination .tui-is-selected:hover {
-  background-color: #4b96e6;
+  background-color: #ff6b08;
 }
 
 .tui-pagination .tui-first-child.tui-is-selected,
@@ -65,51 +70,26 @@
   margin-left: 0;
 }
 
-.tui-pagination .tui-first-child,
-.tui-pagination .tui-prev-is-ellip {
-  border-left: 1px solid #ddd;
-}
-
-.tui-pagination .tui-last-child,
-.tui-pagination .tui-next-is-ellip {
-  border-right: 1px solid #ddd;
-}
-
-.tui-pagination .tui-first-child.tui-is-selected {
-  border-left: 1px solid #4b96e6;
-}
-
-.tui-pagination .tui-last-child.tui-is-selected {
-  border-right: 1px solid #4b96e6;
-}
-
 .tui-pagination .tui-first,
 .tui-pagination .tui-prev,
 .tui-pagination .tui-next,
-.tui-pagination .tui-last,
-.tui-pagination .tui-prev-is-ellip,
-.tui-pagination .tui-next-is-ellip {
+.tui-pagination .tui-last {
   overflow: hidden;
-  height: 26px;
+  height: 40px;
   padding: 0;
   font-size: 0;
-  line-height: 26px;
+  line-height: 40px;
   white-space: nowrap;
   font-weight: normal;
   border: 1px solid #ddd;
+  background-color: #f7f7f7;
 }
 
-.tui-pagination .tui-prev-is-ellip {
-  border-right: 0;
-}
-
-.tui-pagination .tui-next-is-ellip {
-  border-left: 0;
-}
-
-.tui-pagination .tui-first + .tui-prev,
-.tui-pagination .tui-next + .tui-last {
-  border-left: 0;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .tui-pagination .tui-last,
+  .tui-pagination .tui-first {
+    display: none;
+  }
 }
 
 .tui-pagination .tui-ico-first,
@@ -126,8 +106,15 @@
 
 .tui-pagination .tui-prev-is-ellip,
 .tui-pagination .tui-next-is-ellip {
-  padding: 0;
+  padding: 4px;
   line-height: 1;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .tui-pagination .tui-prev-is-ellip,
+  .tui-pagination .tui-next-is-ellip {
+    display: none;
+  }
 }
 
 .tui-pagination .tui-prev {
@@ -170,6 +157,12 @@
   background-position: 0px -24px;
 }
 
+.tui-pagination .tui-is-disabled {
+  /* background: #fff; */
+  cursor: default;
+  pointer-events: none;
+}
+
 .tui-pagination .tui-is-disabled:hover {
   background: #fff;
   cursor: default;
@@ -209,13 +202,16 @@
 }
 
 .tui-page-inputs .tui-page-current {
-  color: #4b96e6;
+  color: #ff6b08;
 }
 
 .tui-page-separator {
   display: inline-block;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
   font-size: 12px;
-  height: 12px;
+  height: 16px;
   padding: 8px 0 6px;
   vertical-align: top;
 }
