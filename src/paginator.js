@@ -1,24 +1,24 @@
-import Pagination from "tui-pagination";
-import "./tui-pagination.css";
-// import apiServise from "./api-service";
-const refs = {
-  paginationRef: document.querySelector(`[data-pagination-value="2"]`),
-}
+// import Pagination from "tui-pagination";
+// import "./tui-pagination.css";
+// // import apiServise from "./api-service";
+// const refs = {
+//   paginationRef: document.querySelector(`[data-pagination-value="2"]`),
+// }
 
   
-const container = document.getElementById('tui-pagination-container');
+// const container = document.getElementById('tui-pagination-container');
 
-const newPagination = new Pagination(container, paginatorOptions);
+// const newPagination = new Pagination(container, paginatorOptions);
  
-newPagination.getCurrentPage();
+// newPagination.getCurrentPage();
 
-  const paginatorOptions = {
-    totalItems: myNewTotalAmountOfFilms,
-    itemsPerPage: 20,
-    visiblePages: getVisiblePagesCount(),
-    centerAlign: true,
-    totalPage: pageForStartPaginator,
-}
+//   const paginatorOptions = {
+//     totalItems: myNewTotalAmountOfFilms,
+//     itemsPerPage: 20,
+//     visiblePages: getVisiblePagesCount(),
+//     centerAlign: true,
+//     totalPage: pageForStartPaginator,
+// }
   
 
 
